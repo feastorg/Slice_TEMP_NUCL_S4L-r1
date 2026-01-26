@@ -4710,7 +4710,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "kml-custom:Thermal Pad"
+		(property "Footprint" "KMLib_Mounting:Thermal Pad"
 			(at 34.5948 95.25 0)
 			(effects
 				(font
@@ -5308,7 +5308,7 @@
 				)
 			)
 		)
-		(property "Footprint" "kml-custom:MODULE_NUCLEO-L432KC"
+		(property "Footprint" "KMLib_Boards_Modules:MODULE_NUCLEO-L432KC"
 			(at 39.37 137.16 0)
 			(effects
 				(font
@@ -5726,7 +5726,7 @@
 				)
 			)
 		)
-		(property "Footprint" "SparkFun-LED:WS2812-5050-4PIN"
+		(property "Footprint" "KMLib_IC_SMD:WS2812-5050-4PIN"
 			(at 12.7 40.64 0)
 			(effects
 				(font
@@ -6606,7 +6606,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "kml-custom:MODULE_NUCLEO-L432KC"
+		(property "Footprint" "KMLib_Boards_Modules:MODULE_NUCLEO-L432KC"
 			(at 39.37 173.99 0)
 			(effects
 				(font
