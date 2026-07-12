@@ -6,7 +6,7 @@ name: "Slice Template — Nucleo32, Small, 4-Layer, Rev 1"
 status: "released"
 category: "template"
 
-summary: "Starter template for BREAD slices using STM32 Nucleo32 on a small 4-layer PCB (70x100mm)."
+summary: "Starter template for BREADS-compatible Slices using STM32 Nucleo32 on a small 4-layer PCB (70x100mm)."
 description: null
 
 # ── Versioning ────────────────────────────────────────────────────────────────
