@@ -1365,7 +1365,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "SparkFun-DiscreteSemi:AP63205"
+		(symbol "KMLib_IC_Power:AP63205WU-7_Buck_Regulator"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1831,7 +1831,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "kml-custom:NUCLEO-L432KC"
+		(symbol "KMLib_IC_MCU_MPU:NUCLEO-L432KC"
 			(pin_names
 				(offset 1.016)
 			)
@@ -5048,7 +5048,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "KMLib_Mounting:Thermal Pad"
+		(property "Footprint" "KMLib_Mounting:Thermal_Pad"
 			(at 34.5948 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -5724,7 +5724,7 @@
 		)
 	)
 	(symbol
-		(lib_id "kml-custom:NUCLEO-L432KC")
+		(lib_id "KMLib_IC_MCU_MPU:NUCLEO-L432KC")
 		(at 39.37 137.16 0)
 		(unit 1)
 		(body_style 1)
@@ -6032,7 +6032,7 @@
 		)
 	)
 	(symbol
-		(lib_id "SparkFun-DiscreteSemi:AP63205")
+		(lib_id "KMLib_IC_Power:AP63205WU-7_Buck_Regulator")
 		(at 34.29 71.12 0)
 		(unit 1)
 		(body_style 1)
@@ -7239,7 +7239,7 @@
 		)
 	)
 	(symbol
-		(lib_id "kml-custom:NUCLEO-L432KC")
+		(lib_id "KMLib_IC_MCU_MPU:NUCLEO-L432KC")
 		(at 39.37 173.99 0)
 		(unit 2)
 		(body_style 1)
