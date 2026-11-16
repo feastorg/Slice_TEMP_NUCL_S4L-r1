@@ -162,8 +162,8 @@ outputs:
     type: position
     dir: Position
     options:
-      format: ASCII # CSV or ASCII format
-      units: millimeters # millimeters or inches
+      format: ASCII
+      units: millimeters
       separate_files_for_front_and_back: true
       only_smd: true
 
