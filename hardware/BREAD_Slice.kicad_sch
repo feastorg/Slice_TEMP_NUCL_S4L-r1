@@ -3624,7 +3624,7 @@
 		)
 		(uuid "ad2b8d26-938b-4ae0-af8c-d7bbc6fa09cb")
 	)
-	(text "Pinout Details: STM32 Nucleo-32 L432KC\n-------------------------------------------------------------------------------------\nPin			| Function									| Notes\n-------------------------------------------------------------------------------------\nVIN			| External Supply Input						| 7-12V input via CN4 pin 1; powers onboard 3.3V regulator\nGND			| Ground									| Ground reference (multiple available)\nNRST		| Reset Input								| Active LOW; internally pulled-up; can reset MCU externally\n3.3V		| Regulated 3.3V Output						| Output from regulator; ~500 mA max\nA0 (PA0)	| Analog Input, Digital I/O					| ADC12_IN5\nA1 (PA1)	| Analog Input, Digital I/O					| ADC12_IN6\nA2 (PA3)	| Analog Input, Digital I/O					| ADC12_IN8\nA3 (PA4)	| Analog Input, Digital I/O					| ADC12_IN9\nA4 (PA5)	| Analog Input, I2C1_SDA, Digital I/O		| ADC12_IN10; shared with I2C\nA5 (PA6)	| Analog Input, I2C1_SCL, Digital I/O		| ADC12_IN11; shared with I2C\nA6 (PA7)	| Analog Input, Digital I/O					| ADC12_IN12\nA7 (PA2)	| Analog Input, Digital I/O					| ADC12_IN7; shared with VCP_TX if SB2 ON\nD13 (PB3)	| Digital I/O, SPI1_SCK						| Connected to green user LED (LD3)\nD12 (PB4)	| Digital I/O, SPI1_MISO					| -\nD11 (PB5)	| Digital I/O, SPI1_MOSI					| No PWM on D11\nD10 (PA11)	| Digital I/O, TIM1_CH4, SPI_CS				| SPI chip select via GPIO\nD9 (PA8)	| Digital I/O, TIM1_CH1						| -\nD8 (PC15)	| Digital I/O, OSC_OUT						| Shared with LSE oscillator\nD7 (PC14)	| Digital I/O, OSC_IN						| Shared with LSE oscillator\nD6 (PB1)	| Digital I/O, TIM1_CH3N					| PWM (inverted)\nD5 (PB6)	| Digital I/O, TIM16_CH1N					| PWM (inverted); shared with I2C SCL if SB16 ON\nD4 (PB7)	| Digital I/O								| Shared with I2C SDA if SB18 ON\nD3 (PB0)	| Digital I/O, TIM1_CH2N					| PWM (inverted)\nD2 (PA12)	| Digital I/O								| -\nD1 (PA9)	| USART1 TX									| Connected to ST-LINK VCP_TX (shared)\nD0 (PA10)	| USART1 RX									| Connected to ST-LINK VCP_RX\nAREF		| Analog Reference							| Tied to AVDD internally\n+5V			| 5V Power (in/out)							| From USB (output) or external (input) via CN4 pin 4\nGND			| Ground									| Additional ground pin\n-------------------------------------------------------------------------------------"
+	(text "Pinout Details: STM32 Nucleo-32 L432KC\n-------------------------------------------------------------------------------------\nPin			| Function									| Notes\n-------------------------------------------------------------------------------------\nVIN			| External Supply Input						| 7-12V input via CN4 pin 1; powers onboard 3.3V regulator\nGND			| Ground									| Ground reference (multiple available)\nNRST		| Reset Input								| Active LOW; internally pulled-up; can reset MCU externally\n3.3V		| Regulated 3.3V Output						| Output from regulator; ~500 mA max\nA0 (PA0)	| Analog Input, Digital I/O					| ADC12_IN5\nA1 (PA1)	| Analog Input, Digital I/O					| ADC12_IN6\nA2 (PA3)	| Analog Input, Digital I/O					| ADC12_IN8\nA3 (PA4)	| Analog Input, Digital I/O					| ADC12_IN9; slice SYNC\nA4 (PA5)	| Analog Input, Digital I/O					| ADC12_IN10; bus I2C_DAT via SB18 to PB7; keep PA5 a floating input\nA5 (PA6)	| Analog Input, Digital I/O					| ADC12_IN11; bus I2C_CLK via SB16 to PB6; keep PA6 a floating input\nA6 (PA7)	| Analog Input, Digital I/O					| ADC12_IN12; slice LED\nA7 (PA2)	| Analog Input, Digital I/O					| ADC12_IN7; shared with VCP_TX if SB2 ON\nD13 (PB3)	| Digital I/O, SPI1_SCK						| Connected to green user LED (LD3)\nD12 (PB4)	| Digital I/O, SPI1_MISO					| -\nD11 (PB5)	| Digital I/O, SPI1_MOSI					| No PWM on D11\nD10 (PA11)	| Digital I/O, TIM1_CH4, SPI_CS				| SPI chip select via GPIO\nD9 (PA8)	| Digital I/O, TIM1_CH1						| -\nD8 (PC15)	| Digital I/O, OSC_OUT						| Shared with LSE oscillator\nD7 (PC14)	| Digital I/O, OSC_IN						| Shared with LSE oscillator\nD6 (PB1)	| Digital I/O, TIM1_CH3N					| PWM (inverted)\nD5 (PB6)	| I2C1_SCL, Digital I/O					| I2C SCL on A5 through SB16 (ON); not used as D5\nD4 (PB7)	| I2C1_SDA, Digital I/O					| I2C SDA on A4 through SB18 (ON); not used as D4\nD3 (PB0)	| Digital I/O, TIM1_CH2N					| PWM (inverted)\nD2 (PA12)	| Digital I/O								| -\nD1 (PA9)	| USART1 TX									| Connected to ST-LINK VCP_TX (shared)\nD0 (PA10)	| USART1 RX									| Connected to ST-LINK VCP_RX\nAREF		| Analog Reference							| Tied to AVDD internally\n+5V			| 5V Power (in/out)							| From USB (output) or external (input) via CN4 pin 4\nGND			| Ground									| Additional ground pin\n-------------------------------------------------------------------------------------"
 		(exclude_from_sim no)
 		(at -0.508 261.112 0)
 		(effects
@@ -3758,10 +3758,6 @@
 		(uuid "1f045a2b-e1f7-4edc-81f4-fe1a3f9aec64")
 	)
 	(no_connect
-		(at 54.61 184.15)
-		(uuid "2f38cfb2-9eb7-4c6d-8960-cf633d2f2981")
-	)
-	(no_connect
 		(at 22.86 124.46)
 		(uuid "30951e8a-a70d-470f-8c6b-dd11f77ff339")
 	)
@@ -3780,10 +3776,6 @@
 	(no_connect
 		(at 24.13 166.37)
 		(uuid "461e081f-239a-4576-a3eb-44e81a9630cf")
-	)
-	(no_connect
-		(at 54.61 176.53)
-		(uuid "53454f04-b730-4488-aa84-0630aaf2deca")
 	)
 	(no_connect
 		(at 54.61 137.16)
@@ -4111,17 +4103,6 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 142.24) (xy 54.61 142.24)
-		)
-		(stroke
-			(width 0.2032)
-			(type default)
-			(color 0 132 132 1)
-		)
-		(uuid "71934c8e-627c-433f-9265-90efcf77b56a")
-	)
-	(wire
-		(pts
 			(xy 55.88 67.31) (xy 55.88 69.85)
 		)
 		(stroke
@@ -4229,17 +4210,6 @@
 			(color 0 0 0 1)
 		)
 		(uuid "96fd226a-098b-4282-bd74-acdc851c57c2")
-	)
-	(wire
-		(pts
-			(xy 62.23 139.7) (xy 54.61 139.7)
-		)
-		(stroke
-			(width 0.2032)
-			(type default)
-			(color 0 132 132 1)
-		)
-		(uuid "9943ba15-15a3-46a9-83eb-51759fc66106")
 	)
 	(wire
 		(pts
@@ -4416,16 +4386,6 @@
 		)
 		(uuid "2d30847b-5e80-4174-9451-5c758b43d7d1")
 	)
-	(label "SYNC"
-		(at 62.23 142.24 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "2f10cd88-c208-4b27-a2b3-b10350abe7c3")
-	)
 	(label "INT"
 		(at 43.18 41.91 0)
 		(effects
@@ -4435,16 +4395,6 @@
 			(justify left bottom)
 		)
 		(uuid "5cf95d41-0297-4ae5-a362-115395fd516f")
-	)
-	(label "LED"
-		(at 62.23 139.7 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "73716aca-c3b3-42c1-a297-7c367d76a31a")
 	)
 	(label "LED"
 		(at 17.78 31.75 0)
@@ -7790,5 +7740,53 @@
 		(path "/"
 			(page "1")
 		)
+	)
+	(no_connect
+		(at 54.61 139.7)
+		(uuid "0dda480e-0e26-4e0c-88ec-2f93abd70662")
+	)
+	(no_connect
+		(at 54.61 142.24)
+		(uuid "dff36ca6-0538-4be8-8516-fd4a1b2afb49")
+	)
+	(wire
+		(pts
+			(xy 54.61 184.15) (xy 62.23 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03faf857-cdb4-4e25-a0f5-2ea577872061")
+	)
+	(label "LED"
+		(at 62.23 184.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2ccc041b-07ff-4935-b0d0-510001c7bc00")
+	)
+	(wire
+		(pts
+			(xy 54.61 176.53) (xy 62.23 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "278ef0c8-ffaa-4995-ac17-fad7b42d3d36")
+	)
+	(label "SYNC"
+		(at 62.23 176.53 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "cb893854-ee6b-44c4-b63f-ca9ecda7d3a3")
 	)
 )
